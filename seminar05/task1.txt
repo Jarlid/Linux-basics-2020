@@ -1,13 +1,79 @@
 # print your command here
 
-a. git init ...
+a.
+git init nameiguess
 
 b.
+touch bio.md
+touch main.cpp
+
+//Открываем bio.md и пишем: Что-то написано.
+//Открываем main.cpp и пишем: #include <iostream>
+//using namespace std;
+//int main(){
+//	cout << "Hello!";
+//	return 0;
+//}
+
+git add bio.md
+git add main.cpp
+git commit -m "Add bio.md and main.cpp"
 
 c.
+touch Makefile
+
+//Открываем Makefile и пишем: SHELL := /bin/bash
+//
+//all: main.cpp clean
+//
+//build: main.cpp
+//	g++ main.cpp -o prog
+//	
+//run: build
+//	./prog
+//	
+//clean:
+//	rm prog
+//	
+//.PHONY: clean
+
+make
+g++ main.cpp -o prog
+git add Makefile
+git commit -m "Add Makefile"
 
 d.
+//Открываем bio.md и дописываем рандомные буквы.
+
+git add bio.md
+git commit -m "Add random letters"
+
+//Открываем bio.md и дописываем рандомные цифры.
+
+git add bio.md
+git commit -m "Add random numbers"
+
+//Открываем bio.md и дописываем рандомные символы.
+
+git add bio.md
+git commit -m "Add random symbols"
 
 e.
+git checkout 8e19ff5491d93f37231288ec8022fafc23c3418b
+git switch -c cmake
+rm Makefile
+touch CMakeLists.txt
+//Открываем CMakeLists.txt и пишем: cmake_minimum_required(VERSION 3.10)
+//project(nameiguess)
+//set(CMAKE_CXX_STANDARD 14)
+//set(SRC main.cpp)
+//set(RUN prog)
+//add_executable(${RUN} ${SRC})
 
 f.
+
+git add .
+got commit -m "Remove Makefile, add CMake"
+git checkout master
+git add .
+got commit -m "Merge branches"
